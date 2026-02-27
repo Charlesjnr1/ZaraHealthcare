@@ -41,7 +41,7 @@ export default function ServicesSection() {
           {/* Image */}
           <div className="relative h-[350px] rounded-2xl overflow-hidden">
             <Image
-              src="/images/as1.jpg"
+              src="/images/as7.jpg"
               alt="Skilled nursing care"
               fill
               className="object-cover"
@@ -74,7 +74,7 @@ export default function ServicesSection() {
           {/* Image */}
           <div className="relative h-[350px] rounded-2xl overflow-hidden">
             <Image
-              src="/images/as2.jpg"
+              src="/images/as8.jpg"
               alt="Personal care support"
               fill
               className="object-cover"
