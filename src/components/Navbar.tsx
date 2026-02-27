@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { HeartPulse, Menu, X, Phone, Mail } from "lucide-react";
 import { useState } from "react";
@@ -29,23 +30,20 @@ export default function Navbar() {
       </div>
 
       {/* MAIN NAVBAR */}
-      <header className="bg-white/95 backdrop-blur-md border-b border-pink-100 sticky top-0 z-50">
+      <header className="bg-white/100 backdrop-blur-md border-b border-pink-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-3 text-2xl font-bold tracking-tight"
-          >
-            <div className="bg-[#EC4899] p-2 rounded-xl shadow-md">
-              <HeartPulse size={20} className="text-white" />
-            </div>
-
-            <span className="text-[#1E3A8A]">
-              Zara Home<span className="text-[#EC4899]">Healthcare Services</span>
-            </span>
-          </Link>
-
+       <Link href="/" className="flex items-center">
+  <Image
+    src="/images/log.jpeg"
+    alt="Zara Home Healthcare Services Logo"
+    width={200}
+    height={80}
+    className="h-12 w-auto object-contain"
+    priority
+  />
+</Link>
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-10 font-medium text-[#1E3A8A]">
             <Link
