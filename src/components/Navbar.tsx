@@ -42,7 +42,7 @@ export default function Navbar() {
             </div>
 
             <span className="text-[#1E3A8A]">
-              ZaRa<span className="text-[#EC4899]">Healthcare</span>
+              Zara Home<span className="text-[#EC4899]">Healthcare Services</span>
             </span>
           </Link>
 
