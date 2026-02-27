@@ -12,7 +12,7 @@ export default function CoreValuesSection() {
         {/* LEFT IMAGE */}
         <div className="relative h-[500px] lg:h-[600px]">
           <Image
-            src="/images/as1.jpg" // place inside public folder
+            src="/images/as14.jpg" // place inside public folder
             alt="Caregiver assisting senior exercise"
             fill
             className="object-cover"
