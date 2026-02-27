@@ -7,22 +7,22 @@ export default function TeamSection() {
     {
       name: "Claire D. Seibel",
       role: "Nurse",
-      image: "/images/as1.jpg",
+      image: "/images/as10.jpg",
     },
     {
       name: "Katheryn R. Petrie",
       role: "Nurse",
-      image: "/images/as2.jpg",
+      image: "/images/as12.jpg",
     },
     {
       name: "Margarita O. Atkinson",
       role: "Nurse",
-      image: "/images/as3.jpg",
+      image: "/images/as13.jpg",
     },
     {
       name: "Natasha J. Davey",
       role: "Nurse",
-      image: "/images/as4.jpg",
+      image: "/images/as11.jpg",
     },
   ];
 
