@@ -1,0 +1,185 @@
+"use client";
+
+import Image from "next/image";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { useState } from "react";
+import { X } from "lucide-react";
+
+type Topic = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+export default function KnowledgeCenterHero() {
+  const [active, setActive] = useState<Topic | null>(null);
+
+  const topics: Topic[] = [
+    {
+      id: "caregiver",
+      title: "What is a caregiver?",
+      content:
+        "A caregiver is a trained professional who provides medical and non-medical assistance to individuals who need support due to age, illness, or recovery. They assist with daily living activities, medication management, mobility support, and emotional care — ensuring dignity, safety, and comfort at home.",
+    },
+    {
+      id: "industry",
+      title: "Senior care industry analysis",
+      content:
+        "The senior care industry is rapidly expanding due to increased life expectancy and rising demand for in-home healthcare services. Families increasingly prefer personalized, home-based care over institutional settings. Technology integration and elevated certification standards are shaping the future of premium care delivery.",
+    },
+    {
+      id: "start-care",
+      title: "How to start your care?",
+      content:
+        "Beginning your care journey starts with a consultation and detailed assessment. Our team evaluates medical needs, lifestyle preferences, and personal requirements before matching you with a certified caregiver and creating a fully customized care plan.",
+    },
+  ];
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.15,
+        type: "spring",
+        stiffness: 120,
+      },
+    }),
+    hover: {
+      y: -10,
+      scale: 1.05,
+      boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+    },
+  };
+
+  return (
+    <section className="relative w-full h-[560px] md:h-[680px] overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/images/Homeee.jpg"
+        alt="Caregiver assisting elderly woman at home"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+
+      {/* Gradient Overlay */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-[#1E3A8A]/70 via-[#1E3A8A]/50 to-black/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      />
+
+      {/* Center Title */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-white text-4xl md:text-6xl font-light tracking-wide drop-shadow-lg text-center"
+        >
+          Knowledge Center
+        </motion.h1>
+      </div>
+
+      {/* Bottom Cards */}
+      <div className="absolute bottom-0 left-0 w-full px-6 pb-10 z-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-5">
+          {topics.map((topic, index) => (
+            <motion.div
+              key={topic.id}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              whileHover="hover"
+              onClick={() => setActive(topic)}
+              role="button"
+              tabIndex={0}
+              className={`cursor-pointer p-8 text-lg md:text-xl font-medium shadow-xl 
+              rounded-xl transition-all duration-500
+              ${
+                index === 0
+                  ? "bg-white text-[#1E3A8A] hover:bg-[#f0f4ff]"
+                  : "bg-[#EC4899] text-white hover:bg-[#f472b6]"
+              }`}
+            >
+              {topic.title}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {active && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActive(null)}
+            />
+
+            {/* Modal Box */}
+            <motion.div
+              className="fixed inset-0 flex items-center justify-center z-[110] px-6"
+              initial={{ opacity: 0, scale: 0.85, y: 40 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.85, y: 40 }}
+              transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
+            >
+              <div
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white max-w-2xl w-full rounded-3xl shadow-2xl p-8 relative border-t-8 border-[#EC4899]"
+              >
+                {/* Close Icon */}
+                <motion.button
+                  onClick={() => setActive(null)}
+                  whileHover={{ rotate: 90, scale: 1.2 }}
+                  className="absolute top-5 right-5 text-[#1E3A8A] hover:text-[#EC4899] transition"
+                  aria-label="Close modal"
+                >
+                  <X size={24} />
+                </motion.button>
+
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="text-2xl md:text-3xl font-semibold text-[#1E3A8A] mb-6"
+                >
+                  {active.title}
+                </motion.h2>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-gray-600 leading-relaxed text-lg"
+                >
+                  {active.content}
+                </motion.p>
+
+                <div className="mt-8 flex justify-end">
+                  <motion.button
+                    onClick={() => setActive(null)}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-[#1E3A8A] text-white px-6 py-3 rounded-lg transition"
+                  >
+                    Close
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}
