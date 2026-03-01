@@ -10,7 +10,7 @@ export default function Footer() {
         {/* COMPANY INFO */}
         <div>
           <h3 className="text-2xl font-serif font-semibold mb-4">
-            ZARA Healthcare
+            ZARA HOME HEALTHCARE SERVICES, Inc.
           </h3>
           <p className="text-gray-300 leading-relaxed">
             Providing compassionate and professional home care services
