@@ -35,7 +35,7 @@ export default function HeroSection() {
       image: "/images/as1.jpg",
     },
     {
-      badge: "Concierge Medical Support",
+      badge: "ZHHS",
       title: "Luxury Healthcare",
       titleSpan: "At Your Fingertips",
       description:
