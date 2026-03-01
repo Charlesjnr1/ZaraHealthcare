@@ -13,7 +13,7 @@ export default function HeroSection() {
     {
       badge: "Premium Home Healthcare",
       title: "Zara Healthcare",
-      titleSpan: "In The Comfort Of Home",
+      titleSpan: "Your comfort, our priority!",
       description:
         "Experience private, high-quality healthcare tailored to your lifestyle. Our certified professionals deliver personalized medical support with discretion, dignity, and excellence.",
       image: "/images/health.png",
