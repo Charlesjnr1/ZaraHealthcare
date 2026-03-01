@@ -5,10 +5,11 @@ import { useState } from "react";
 export default function EmploymentApplication() {
   const [form, setForm] = useState<any>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
+ const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+) => {
+  setForm({ ...form, [e.target.name]: e.target.value });
+};
   return (
     <div className="bg-white min-h-screen py-12 px-6">
       <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden border-t-8 border-[#EC4899]">
