@@ -56,6 +56,50 @@ export default function EmploymentApplication() {
           <div className="grid md:grid-cols-2 text-black gap-6">
             <Select label="Currently Employed?" name="employed" />
             <Select label="May we contact employer?" name="contactEmployer" />
+            <Select label="Are you Eligible for Employment?" name="Employment" />
+          </div>
+
+          {/* EMERGENCY CONTACT */}
+          <SectionTitle title="Emergency Contact" />
+
+          <div className="grid md:grid-cols-3 text-black gap-6">
+            <Input label="Full Name" name="emergencyName" onChange={handleChange} />
+            <Input label="Relationship" name="emergencyRelation" onChange={handleChange} />
+            <Input label="Telephone #" name="emergencyPhone" onChange={handleChange} />
+          </div>
+
+          <div className="grid md:grid-cols-4 text-black gap-6">
+            <Input label="Address" name="emergencyAddress" onChange={handleChange} />
+            <Input label="City" name="emergencyCity" onChange={handleChange} />
+            <Input label="State" name="emergencyState" onChange={handleChange} />
+            <Input label="Zip" name="emergencyZip" onChange={handleChange} />
+          </div>
+          {/* PERSONAL REFERENCES */}
+          <SectionTitle title="Personal References" />
+
+          <div className="overflow-x-auto">
+            <table className="w-full border border-gray-300 text-sm">
+              <thead className="bg-[#1E3A8A] text-white">
+                <tr>
+                  <th className="p-3 border">Name</th>
+                  <th className="p-3 border">Address</th>
+                  <th className="p-3 border">Business</th>
+                  <th className="p-3 border">From</th>
+                  <th className="p-3 border">To</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[1, 2, 3].map((i) => (
+                  <tr key={i} className="text-black">
+                    <td className="border p-2"><input className="w-full outline-none" /></td>
+                    <td className="border p-2"><input className="w-full outline-none" /></td>
+                    <td className="border p-2"><input className="w-full outline-none" /></td>
+                    <td className="border p-2"><input type="date" className="w-full outline-none" /></td>
+                    <td className="border p-2"><input type="date" className="w-full outline-none" /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           {/* EDUCATION */}
@@ -68,14 +112,31 @@ export default function EmploymentApplication() {
 
           <EmploymentHistory />
 
-          {/* REFERENCES */}
-          <SectionTitle title="Personal References" />
+          {/* BACKGROUND */}
+          <SectionTitle title="Background Information" />
 
-          <div className="grid md:grid-cols-4 text-black gap-6">
-            <Input label="Name" name="refName" onChange={handleChange} />
-            <Input label="Address" name="refAddress" onChange={handleChange} />
-            <Input label="Business" name="refBusiness" onChange={handleChange} />
-            <Input label="Years Known" name="refYears" onChange={handleChange} />
+          <Select
+            label="Have you ever been convicted of a felony within the last 5 years?"
+            name="felony"
+            onChange={handleChange}
+          />
+
+          <div>
+            <label className="block mb-2 text-sm font-medium text-[#1E3A8A]">
+              If yes, please explain
+            </label>
+            <textarea
+              name="felonyExplanation"
+              onChange={handleChange}
+              rows={4}
+              className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            />
+          </div>
+
+          {/* SIGNATURE */}
+          <div className="grid md:grid-cols-2 gap-6 pt-6">
+            <Input label="Signature of Applicant" name="signature" onChange={handleChange} />
+            <Input label="Date" name="signatureDate" type="date" onChange={handleChange} />
           </div>
 
           {/* SUBMIT */}
