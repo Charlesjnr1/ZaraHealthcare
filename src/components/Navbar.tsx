@@ -144,7 +144,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/book-care"
+              href="/bookcare"
               className="block text-center bg-[#EC4899] text-white px-6 py-3 rounded-xl hover:bg-pink-600 transition shadow-md"
               onClick={() => setOpen(false)}
             >
