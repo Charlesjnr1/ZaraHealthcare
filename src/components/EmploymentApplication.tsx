@@ -133,6 +133,35 @@ export default function EmploymentApplication() {
               className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-400"
             />
           </div>
+          {/* AGREEMENT SECTION */}
+          <SectionTitle title="Applicant Certification & Agreement" />
+
+          <div className="text-sm text-gray-700 space-y-4 leading-relaxed">
+            <p>
+              I certify that the facts contained in this application are true and complete.
+              Any misrepresentation or falsification of information may be cause for rejection
+              of my application or dismissal if discovered later.
+            </p>
+
+            <p>
+              I understand that employment is not guaranteed for any term and may be terminated
+              at any time with or without prior notice.
+            </p>
+
+            <p>
+              I authorize investigation of all statements, including background checks,
+              criminal records, motor vehicle records, and previous employment history.
+            </p>
+
+            <p>
+              I agree to comply with company rules and regulations and agree to drug testing
+              prior to and during employment if required.
+            </p>
+
+            <p>
+              ZARA Home Healthcare Services Inc. is an Equal Opportunity Employer.
+            </p>
+          </div>
 
           {/* SIGNATURE */}
           <div className="grid md:grid-cols-2 gap-6 pt-6">
@@ -273,3 +302,4 @@ function EmploymentHistory() {
     </div>
   );
 }
+
