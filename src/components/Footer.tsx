@@ -44,14 +44,16 @@ export default function Footer() {
         {/* SERVICES */}
         <div>
           <h4 className="text-lg font-semibold mb-6 text-pink-400">
-            Services
+            Areas of Services
           </h4>
           <ul className="space-y-3 text-gray-300">
-            <FooterLink label="Personal Care" />
-            <FooterLink label="Companionship" />
-            <FooterLink label="24-Hour Care" />
-            <FooterLink label="Live-In Care" />
-            <FooterLink label="Specialized Care" />
+            <FooterLink label="Baltimore city" />
+            <FooterLink label="Baltimore county" />
+            <FooterLink label="Harford county" />
+            <FooterLink label="Howard county" />
+            <FooterLink label="Montgomery county" />
+            <FooterLink label="Prince George"s county" />
+            <FooterLink label="Anne Arundel county" />
           </ul>
         </div>
 
