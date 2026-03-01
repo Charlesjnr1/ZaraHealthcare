@@ -64,7 +64,7 @@ export default function Footer() {
             <li>10 Shirehall Ct</li>
             <li>Middle River, MD 21220</li>
             <li>Phone: (856) 379-5070</li>
-            <li>Email: Zarahealthcareservices@outlook.com</li>
+            <li>Email: zarahomehealthcareservices@outlook.com</li>
           </ul>
         </div>
       </div>
