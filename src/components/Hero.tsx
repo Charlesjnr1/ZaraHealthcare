@@ -11,7 +11,7 @@ export default function HeroSection() {
 
   const slides = [
     {
-      badge: "Premium Home Healthcare",
+      badge: "Zara Home Healthcare",
       title: "Zara Healthcare",
       titleSpan: "Your comfort, our priority!",
       description:
@@ -35,8 +35,8 @@ export default function HeroSection() {
       image: "/images/as1.jpg",
     },
     {
-      badge: "Concierge Medical Support",
-      title: "Luxury Healthcare",
+      badge: "ZZH",
+      title: "Zara Home Healthcare",
       titleSpan: "At Your Fingertips",
       description:
         "Enjoy priority access to medical professionals and seamless coordination of appointments.",
