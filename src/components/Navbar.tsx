@@ -20,7 +20,7 @@ export default function Navbar() {
             </span>
             <span className="flex items-center gap-2">
               <Mail size={14} className="text-pink-300" />
-              Zarahealthcareservices@outlook.com
+             zarahomehealthcareservices@outlook.com
             </span>
           </div>
           <span className="text-pink-200 font-medium">
