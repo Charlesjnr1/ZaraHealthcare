@@ -30,7 +30,7 @@ export default function KnowledgeCenterHero() {
   const topics: Topic[] = [
     {
       id: "caregiver",
-      title: "What is a Caregiver?",
+      title: "Understanding the Role of a Caregiver?",
       content: `A caregiver is a trained and compassionate professional who provides essential support to individuals who need assistance with daily living activities. Caregivers help clients maintain independence, safety, and dignity while receiving care in the comfort of their own homes.
 
 At ZARA Home Healthcare Services, Inc., our caregivers assist with personal care, medication reminders, mobility support, meal preparation, companionship, and light housekeeping.
@@ -43,7 +43,7 @@ Our caregivers are carefully selected, trained, and committed to delivering high
     },
     {
       id: "industry",
-      title: "Senior Care Industry Analysis",
+      title: "Supporting Seniors with Dignity",
       content: `At ZARA Home Healthcare Services, Inc., we believe every senior deserves to be treated with respect, compassion, and honor. Aging should never diminish a person’s dignity — it should be supported with care that uplifts and empowers.
 
 Our dedicated caregivers provide personalized assistance while preserving independence and promoting comfort at home.
@@ -57,7 +57,7 @@ ZARA Home Healthcare Services, Inc.
     },
     {
       id: "start-care",
-      title: "How to Start Your Care",
+      title: "Start Your Care Journey",
       content: `Beginning care for yourself or a loved one should feel simple, supportive, and stress-free.
 
 At ZARA Home Healthcare Services, Inc., we guide you every step of the way to ensure you receive the right level of care tailored to your unique needs.
