@@ -11,8 +11,8 @@ export default function HeroSection() {
 
   const slides = [
     {
-      badge: "Premium Home Healthcare",
-      title: "Zara Healthcare",
+      badge: "Zara Home Healthcare",
+      title: "ZARA HOME HEALTHCARE SERVICES, Inc.",
       titleSpan: "In The Comfort Of Home",
       description:
         "Experience private, high-quality healthcare tailored to your lifestyle. Our certified professionals deliver personalized medical support with discretion, dignity, and excellence.",
