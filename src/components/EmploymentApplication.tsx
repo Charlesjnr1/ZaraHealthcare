@@ -172,7 +172,7 @@ function Input({
   label: string;
   name: string;
   type?: string;
-  onChange?: any;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }) {
   return (
     <div>
@@ -188,9 +188,16 @@ function Input({
     </div>
   );
 }
-
-/* Reusable Select */
-function Select({ label, name }: { label: string; name: string }) {
+/* Select */
+function Select({
+  label,
+  name,
+  onChange,
+}: {
+  label: string;
+  name: string;
+  onChange?: React.ChangeEventHandler<HTMLSelectElement>;
+}) {
   return (
     <div>
       <label className="block mb-2 text-sm font-medium text-[#1E3A8A]">
@@ -198,16 +205,16 @@ function Select({ label, name }: { label: string; name: string }) {
       </label>
       <select
         name={name}
+        onChange={onChange}
         className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-400"
       >
         <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
       </select>
     </div>
   );
 }
-
 /* Education Table */
 function EducationTable() {
   return (
