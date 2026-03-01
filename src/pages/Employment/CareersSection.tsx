@@ -2,47 +2,51 @@
 
 import Image from "next/image";
 import { FileText } from "lucide-react";
+import Link from "next/link";
 
 export default function CareersSection() {
   const jobs = [
     {
       title: "Certified Nursing Assistant (CNA) / GNA",
-      description: "Join our compassionate team and make a meaningful difference in patients’ lives every day.",
+      description:
+        "Join our compassionate team and make a meaningful difference in patients’ lives every day.",
     },
     {
       title: "Companion Caregiver",
-      description: "Provide emotional support and assistance to clients while promoting independence and dignity.",
+      description:
+        "Provide emotional support and assistance to clients while promoting independence and dignity.",
     },
     {
       title: "Registered Nurse (RN)",
-      description: "Deliver skilled clinical care with professionalism, integrity, and excellence.",
+      description:
+        "Deliver skilled clinical care with professionalism, integrity, and excellence.",
     },
   ];
 
   return (
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
+        
         {/* LEFT IMAGE */}
-<div className="relative h-full min-h-[400px] rounded-3xl overflow-hidden shadow-xl">
-  <Image
-    src="/images/as5.avif"
-    alt="Healthcare professional smiling"
-    fill
-    className="object-cover"
-    priority
-  />
+        <div className="relative h-full min-h-[400px] rounded-3xl overflow-hidden shadow-xl">
+          <Image
+            src="/images/as5.avif"
+            alt="Healthcare professional smiling"
+            fill
+            className="object-cover"
+            priority
+          />
 
-  {/* Overlay Badge */}
-  <div className="absolute top-6 left-6 bg-[#0A1F44] text-white px-5 py-3 rounded-xl shadow-lg">
-    <p className="text-sm uppercase tracking-widest text-pink-400">
-      We’re Hiring
-    </p>
-    <p className="font-semibold text-lg">
-      Join Our Growing Team
-    </p>
-  </div>
-</div>
+          {/* Overlay Badge */}
+          <div className="absolute top-6 left-6 bg-[#0A1F44] text-white px-5 py-3 rounded-xl shadow-lg">
+            <p className="text-sm uppercase tracking-widest text-pink-400">
+              We’re Hiring
+            </p>
+            <p className="font-semibold text-lg">
+              Join Our Growing Team
+            </p>
+          </div>
+        </div>
 
         {/* RIGHT CONTENT */}
         <div>
@@ -86,9 +90,11 @@ export default function CareersSection() {
 
           {/* CTA Button */}
           <div className="mt-12">
-            <button className="bg-[#0A1F44] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-500 transition duration-300">
-              Apply Now
-            </button>
+            <Link href="/apply">
+              <button className="bg-[#0A1F44] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-pink-500 transition duration-300">
+                Apply Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>
