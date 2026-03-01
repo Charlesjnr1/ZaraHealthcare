@@ -11,9 +11,9 @@ export default function HeroSection() {
 
   const slides = [
     {
-      badge: "Zara Home Healthcare",
-      title: "ZARA HOME HEALTHCARE SERVICES, Inc.",
-      titleSpan: "Your comfort, our priority!",
+      badge: "Premium Home Healthcare",
+      title: "Zara Healthcare",
+      titleSpan: "In The Comfort Of Home",
       description:
         "Experience private, high-quality healthcare tailored to your lifestyle. Our certified professionals deliver personalized medical support with discretion, dignity, and excellence.",
       image: "/images/health.png",
@@ -35,7 +35,7 @@ export default function HeroSection() {
       image: "/images/as1.jpg",
     },
     {
-      badge: "ZHHS",
+      badge: "Concierge Medical Support",
       title: "Luxury Healthcare",
       titleSpan: "At Your Fingertips",
       description:
@@ -51,7 +51,7 @@ export default function HeroSection() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 9000);
+    const timer = setInterval(nextSlide, 6000);
     return () => clearInterval(timer);
   }, []);
 
@@ -114,7 +114,7 @@ export default function HeroSection() {
             {/* CTA */}
             <div className="mt-12 flex flex-col sm:flex-row gap-6">
               <Link
-                href="/bookcare"
+                href="/book-care"
                 className="bg-white text-[#1E3A8A] px-10 py-4 rounded-2xl font-semibold shadow-xl hover:scale-105 transition-all duration-300"
               >
                 Book Private Care
