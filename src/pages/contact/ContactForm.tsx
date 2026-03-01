@@ -36,7 +36,7 @@ export default function ContactSection() {
 
             <div className="flex items-center gap-4">
               <Mail className="text-pink-500" />
-              <span>Zarahealthcareservices@outlook.com</span>
+              <span> zarahomehealthcareservices@outlook.com</span>
             </div>
 
             <div className="flex items-center gap-4">
