@@ -46,7 +46,7 @@ export default function EmploymentApplication() {
             <Input label="Present Address" name="presentAddress" onChange={handleChange} />
             <Input label="City" name="presentCity" onChange={handleChange} />
             <Input label="State" name="presentState" onChange={handleChange} />
-            <Input label="Zip" name="presentZip" onChange={handleChange} />
+            <Input label="Zip Code" name="presentZip" onChange={handleChange} />
           </div>
 
           <div className="grid md:grid-cols-2 text-black gap-6">
@@ -82,7 +82,7 @@ export default function EmploymentApplication() {
             <Input label="Address" name="emergencyAddress" onChange={handleChange} />
             <Input label="City" name="emergencyCity" onChange={handleChange} />
             <Input label="State" name="emergencyState" onChange={handleChange} />
-            <Input label="Zipcode" name="emergencyZip" onChange={handleChange} />
+            <Input label="Zip Code" name="emergencyZip" onChange={handleChange} />
           </div>
           {/* PERSONAL REFERENCES */}
           <SectionTitle title="Personal References" />
@@ -312,6 +312,7 @@ function EmploymentHistory() {
     </div>
   );
 }
+
 
 
 
