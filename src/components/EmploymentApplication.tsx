@@ -13,7 +13,16 @@ export default function EmploymentApplication() {
   return (
     <div className="bg-white min-h-screen py-12 px-6">
       <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden border-t-8 border-[#EC4899]">
-
+        
+        {/* ✅ FORM START */}
+        <form
+          action="https://formsubmit.co/zarahomehealthcareservices@outlook.com"
+          method="POST"
+        >
+          {/* FormSubmit Hidden Fields */}
+          <input type="hidden" name="_subject" value="New Employment Application - ZARA Healthcare" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
         {/* HEADER */}
         <div className="bg-[#1E3A8A] text-white p-8 text-center">
           <h1 className="text-3xl font-bold tracking-wide">
@@ -177,6 +186,7 @@ export default function EmploymentApplication() {
           </div>
 
         </div>
+           </form>
       </div>
     </div>
   );
@@ -302,4 +312,5 @@ function EmploymentHistory() {
     </div>
   );
 }
+
 
