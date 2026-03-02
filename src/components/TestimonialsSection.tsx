@@ -38,20 +38,7 @@ const testimonials: Testimonial[] = [
     content:
       "From day one, the communication and attention to detail have been remarkable. Highly recommended.",
   },
-  {
-    id: "5",
-    name: "Sophia Martinez",
-    role: "Client",
-    content:
-      "Their caregivers treat patients with dignity and warmth. The service quality exceeded expectations.",
-  },
-  {
-    id: "6",
-    name: "Daniel Kim",
-    role: "Client",
-    content:
-      "Professional, compassionate, and dependable. We feel confident and supported every step of the way.",
-  },
+  
 ];
 
 export default function TestimonialsSection() {
