@@ -112,7 +112,8 @@ export default function BookingPage() {
                 <option value="Personal Care">Personal Care</option>
                 <option value="Companionship">Companionship</option>
                 <option value="24/7 Live-In Care">24/7 Live-In Care</option>
-                <option value="Post-Surgery Care">Post-Surgery Care</option>
+                <option value="Medication Reminders">Medication Reminders</option>
+                <option value="Meal Preparation & Light Housekeeping">Meal Preparation & Light Housekeeping</option>
               </select>
             </div>
 
