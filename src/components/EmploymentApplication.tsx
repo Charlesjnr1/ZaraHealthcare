@@ -307,11 +307,12 @@ function EmploymentHistory() {
         <Input label="From" name="from1" type="date" />
         <Input label="To" name="to1" type="date" />
         <Input label="Supervisor Name" name="supervisor1" />
-        <Input label="Hourly Rate" name="rate1" />
+        <Input label="Hourly Rate($)" name="rate1" />
       </div>
     </div>
   );
 }
+
 
 
 
