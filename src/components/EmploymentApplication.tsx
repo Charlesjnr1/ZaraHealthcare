@@ -82,7 +82,7 @@ export default function EmploymentApplication() {
             <Input label="Address" name="emergencyAddress" onChange={handleChange} />
             <Input label="City" name="emergencyCity" onChange={handleChange} />
             <Input label="State" name="emergencyState" onChange={handleChange} />
-            <Input label="Zip" name="emergencyZip" onChange={handleChange} />
+            <Input label="Zipcode" name="emergencyZip" onChange={handleChange} />
           </div>
           {/* PERSONAL REFERENCES */}
           <SectionTitle title="Personal References" />
@@ -312,5 +312,6 @@ function EmploymentHistory() {
     </div>
   );
 }
+
 
 
