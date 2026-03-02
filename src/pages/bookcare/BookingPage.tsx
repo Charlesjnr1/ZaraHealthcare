@@ -1,32 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, User, Phone, Mail, FileText } from "lucide-react";
 
 export default function BookingPage() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    service: "",
-    date: "",
-    time: "",
-    notes: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Booking Submitted:", formData);
-    alert("Appointment request submitted successfully!");
-  };
-
   return (
     <section className="min-h-screen bg-white py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -59,7 +36,16 @@ export default function BookingPage() {
           transition={{ duration: 0.7 }}
           className="bg-white shadow-2xl rounded-3xl p-10 border border-gray-100"
         >
-          <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
+          <form
+            action="https://formsubmit.co/Zarahealthcareservices@outlook.com"
+            method="POST"
+            className="grid md:grid-cols-2 gap-8"
+          >
+
+            {/* Hidden FormSubmit Settings */}
+            <input type="hidden" name="_subject" value="New Appointment Booking - ZARA Healthcare" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
 
             {/* Full Name */}
             <div className="flex flex-col">
@@ -72,7 +58,6 @@ export default function BookingPage() {
                   type="text"
                   name="fullName"
                   required
-                  onChange={handleChange}
                   className="w-full pl-10 p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
                   placeholder="Enter your full name"
                 />
@@ -90,7 +75,6 @@ export default function BookingPage() {
                   type="email"
                   name="email"
                   required
-                  onChange={handleChange}
                   className="w-full pl-10 p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
                   placeholder="Enter your email"
                 />
@@ -108,14 +92,13 @@ export default function BookingPage() {
                   type="tel"
                   name="phone"
                   required
-                  onChange={handleChange}
                   className="w-full pl-10 p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
                   placeholder="Enter your phone number"
                 />
               </div>
             </div>
 
-            {/* Service Type */}
+            {/* Service */}
             <div className="flex flex-col">
               <label className="text-[#0A1F44] font-medium mb-2">
                 Select Service
@@ -123,15 +106,13 @@ export default function BookingPage() {
               <select
                 name="service"
                 required
-                onChange={handleChange}
                 className="p-3 border rounded-xl text-black focus:outline-none focus:ring-2 focus:ring-pink-400"
               >
                 <option value="">Choose a service</option>
                 <option value="Personal Care">Personal Care</option>
                 <option value="Companionship">Companionship</option>
                 <option value="24/7 Live-In Care">24/7 Live-In Care</option>
-                <option value="Medication Reminders">Medication Reminders</option>
-                <option value="Meal Preparation & Light Housekeeping">Meal Preparation & Light Housekeeping</option>
+                <option value="Post-Surgery Care">Post-Surgery Care</option>
               </select>
             </div>
 
@@ -146,7 +127,6 @@ export default function BookingPage() {
                   type="date"
                   name="date"
                   required
-                  onChange={handleChange}
                   className="w-full text-black pl-10 p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
               </div>
@@ -163,7 +143,6 @@ export default function BookingPage() {
                   type="time"
                   name="time"
                   required
-                  onChange={handleChange}
                   className="w-full text-black pl-10 p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
               </div>
@@ -179,14 +158,13 @@ export default function BookingPage() {
                 <textarea
                   name="notes"
                   rows={4}
-                  onChange={handleChange}
                   className="w-full text-black pl-10 p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
                   placeholder="Tell us about your care needs..."
-                ></textarea>
+                />
               </div>
             </div>
 
-            {/* Submit Button */}
+            {/* Submit */}
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
