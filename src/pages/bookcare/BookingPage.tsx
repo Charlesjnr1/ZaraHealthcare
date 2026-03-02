@@ -37,7 +37,7 @@ export default function BookingPage() {
           className="bg-white shadow-2xl rounded-3xl p-10 border border-gray-100"
         >
           <form
-            action="https://formsubmit.co/Zarahealthcareservices@outlook.com"
+            action="https://formsubmit.co/zarahomehealthcareservices@outlook.com"
             method="POST"
             className="grid md:grid-cols-2 gap-8"
           >
