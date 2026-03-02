@@ -12,7 +12,7 @@ export default function HeroSection() {
   const slides = [
     {
       badge: "Zara Home Healthcare",
-      title: "Zara Healthcare",
+      title: "ZARA HOME HEALTHCARE SERVICES, Inc",
       titleSpan: "Your comfort, our priority!",
       description:
         "Experience private, high-quality healthcare tailored to your lifestyle. Our certified professionals deliver personalized medical support with discretion, dignity, and excellence.",
@@ -35,7 +35,7 @@ export default function HeroSection() {
       image: "/images/as1.jpg",
     },
     {
-      badge: "ZZH",
+      badge: "ZHHS",
       title: "Zara Home Healthcare",
       titleSpan: "At Your Fingertips",
       description:
@@ -114,7 +114,7 @@ export default function HeroSection() {
             {/* CTA */}
             <div className="mt-12 flex flex-col sm:flex-row gap-6">
               <Link
-                href="/book-care"
+                href="/bookcare"
                 className="bg-white text-[#1E3A8A] px-10 py-4 rounded-2xl font-semibold shadow-xl hover:scale-105 transition-all duration-300"
               >
                 Book Private Care
