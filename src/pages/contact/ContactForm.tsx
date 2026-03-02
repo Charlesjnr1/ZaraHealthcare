@@ -31,36 +31,17 @@ export default function ContactSection() {
           <div className="space-y-5 text-[#0A1F44] text-lg">
             <div className="flex items-center gap-4">
               <Phone className="text-pink-500" />
-              <span>+1  (856) 379-5070</span>
+              <span>+1 (856) 379-5070</span>
             </div>
 
             <div className="flex items-center gap-4">
               <Mail className="text-pink-500" />
-              <span> zarahomehealthcareservices@outlook.com</span>
+              <span>Zarahealthcareservices@outlook.com</span>
             </div>
 
             <div className="flex items-center gap-4">
               <MapPin className="text-pink-500" />
               <span>10 Shirehall Ct Middle River, MD 21220</span>
-            </div>
-          </div>
-
-          {/* Social Icons */}
-          <div className="mt-10">
-            <p className="font-semibold text-[#0A1F44] mb-4">
-              Follow Us
-            </p>
-
-            <div className="flex gap-4">
-              {[Instagram, Facebook, Youtube].map((Icon, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.1 }}
-                  className="w-12 h-12 rounded-full border border-[#0A1F44] flex items-center justify-center text-[#0A1F44] hover:bg-pink-500 hover:text-white hover:border-pink-500 transition"
-                >
-                  <Icon size={20} />
-                </motion.div>
-              ))}
             </div>
           </div>
         </motion.div>
@@ -73,7 +54,15 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="bg-white shadow-2xl rounded-3xl p-12 border border-gray-100"
         >
-          <form className="grid md:grid-cols-2 gap-8">
+          <form
+            action="https://formsubmit.co/Zarahealthcareservices@outlook.com"
+            method="POST"
+            className="grid md:grid-cols-2 gap-8"
+          >
+            {/* Hidden Settings */}
+            <input type="hidden" name="_subject" value="New Contact Message - ZARA Healthcare" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
 
             {/* Full Name */}
             <div className="flex flex-col">
@@ -82,7 +71,8 @@ export default function ContactSection() {
               </label>
               <input
                 type="text"
-                placeholder="John Doe"
+                name="fullName"
+                required
                 className="rounded-full border border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
             </div>
@@ -94,18 +84,20 @@ export default function ContactSection() {
               </label>
               <input
                 type="email"
-                placeholder="example@email.com"
-                className="rounded-full  border border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                name="email"
+                required
+                className="rounded-full border border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
             </div>
 
-            {/* Date */}
+            {/* Preferred Date */}
             <div className="flex flex-col">
               <label className="text-sm font-semibold text-[#0A1F44] mb-2">
                 Preferred Date
               </label>
               <input
                 type="date"
+                name="preferredDate"
                 className="rounded-full text-black border border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
             </div>
@@ -117,17 +109,20 @@ export default function ContactSection() {
               </label>
               <input
                 type="tel"
-                placeholder="+1 (___) ___-____"
+                name="telephone"
                 className="rounded-full text-black border border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
             </div>
 
-            {/* Service Select */}
+            {/* Service */}
             <div className="md:col-span-2 flex flex-col">
               <label className="text-sm font-semibold text-[#0A1F44] mb-2">
                 Select Service
               </label>
-              <select className="rounded-full border text-black border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400">
+              <select
+                name="service"
+                className="rounded-full border text-black border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              >
                 <option>Companion Care</option>
                 <option>Skilled Nursing</option>
                 <option>Home Healthcare</option>
@@ -140,15 +135,17 @@ export default function ContactSection() {
                 Message
               </label>
               <textarea
+                name="message"
                 rows={6}
-                placeholder="Write your message here..."
+                required
                 className="rounded-3xl text-black border border-gray-200 px-6 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
             </div>
 
-            {/* Submit Button */}
+            {/* Submit */}
             <div className="md:col-span-2">
               <motion.button
+                type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full bg-[#0A1F44] text-white py-4 rounded-full font-semibold text-lg hover:bg-pink-500 transition duration-300"
@@ -159,6 +156,7 @@ export default function ContactSection() {
 
           </form>
         </motion.div>
+
       </div>
     </section>
   );
