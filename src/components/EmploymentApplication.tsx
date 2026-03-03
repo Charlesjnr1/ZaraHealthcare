@@ -207,11 +207,13 @@ function Input({
   name,
   type = "text",
   onChange,
+  required = false,
 }: {
   label: string;
   name: string;
   type?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  required?: boolean;
 }) {
   return (
     <div>
@@ -222,6 +224,7 @@ function Input({
         type={type}
         name={name}
         onChange={onChange}
+        required={required}
         className="w-full text-black border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-pink-400"
       />
     </div>
@@ -312,6 +315,7 @@ function EmploymentHistory() {
     </div>
   );
 }
+
 
 
 
