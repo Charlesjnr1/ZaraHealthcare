@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ZARA Home Healthcare Services",
   description: "Professional Home Healthcare Services You Can Trust.",
-   icons: {
-    icon: "/favicon.ico",
+  icons: {
+    icon: "/logo.png",
   },
 };
 
