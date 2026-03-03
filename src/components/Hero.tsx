@@ -16,7 +16,7 @@ export default function HeroSection() {
       titleSpan: "Your comfort, our priority!",
       description:
         "Experience private, high-quality healthcare tailored to your lifestyle. Our certified professionals deliver personalized medical support with discretion, dignity, and excellence.",
-      image: "/images/health.png",
+      image: "/images/as7.jpg",
     },
     {
       badge: "Expert Nursing Staff",
