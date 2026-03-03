@@ -31,14 +31,6 @@ const testimonials: Testimonial[] = [
     content:
       "They brought peace of mind to our family. It's comforting to know our loved one is in capable hands.",
   },
-  {
-    id: "4",
-    name: "Michael Brown",
-    role: "Client",
-    content:
-      "From day one, the communication and attention to detail have been remarkable. Highly recommended.",
-  },
-  
 ];
 
 export default function TestimonialsSection() {
