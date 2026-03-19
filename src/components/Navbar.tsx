@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <Phone size={14} className="text-pink-300" />
-              +1 (856) 379-5070
+              +1 (410) 816-5900
             </span>
             <span className="flex items-center gap-2">
               <Mail size={14} className="text-pink-300" />
