@@ -104,7 +104,7 @@ export default function Footer() {
                 href="tel:+12164154531"
                 className="hover:text-pink-400 transition"
               >
-                (216) 415-5070
+                (216) 415-4531
               </a>
             </li>
 
