@@ -31,7 +31,7 @@ export default function ContactSection() {
           <div className="space-y-5 text-[#0A1F44] text-lg">
             <div className="flex items-center gap-4">
               <Phone className="text-pink-500" />
-              <span>+1 (856) 379-5070</span>
+              <span>+1 (410) 816-5900</span>
             </div>
 
             <div className="flex items-center gap-4">
